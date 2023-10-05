@@ -1,0 +1,31 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  background-color: #7a512590;
+  position: sticky;
+  height: 8vh;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0px;
+}
+li {
+  list-style-type: none;
+  margin-right: 12px;
+}
+.website-name {
+  font-size: 20px;
+  margin: 0px;
+}
+.link-style {
+  color: unset;
+  text-decoration: none;
+}
+.logout {
+  cursor: pointer;
+}
