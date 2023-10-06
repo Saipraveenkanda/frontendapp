@@ -28,7 +28,8 @@ class Register extends Component {
     // pending code for registration api changes
     const { username, password, email } = this.state;
     const userDetails = { username, password, email };
-    const url = "http://localhost:3001/users/";
+    //const url = "http://localhost:3001/users/";
+    const url = "http://localhost:3002/newuser";
     const options = {
       method: "POST",
       headers: {

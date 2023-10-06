@@ -37,7 +37,8 @@ class LoginPage extends Component {
     const { username, password } = this.state;
     const userDetails = { username, password };
     // pending for login checking api
-    const url = "http://localhost:3001/login/";
+    //const url = "http://localhost:3001/login/";
+    const url = "http://localhost:3002/login/";
     const options = {
       method: "POST",
       headers: {
@@ -51,12 +52,14 @@ class LoginPage extends Component {
     console.log(response);
     console.log(data);
     if (response.ok === true) {
-      this.onSubmitSuccess(data.jwtToken);
+      this.onSubmitSuccess();
     } else {
-      this.onSubmitFailure(data.message);
+      this.onSubmitFailure(data.errorMsg);
     }
     console.log(userDetails);
   };
+  //data.jwtToken
+  //data.message
 
   onChangeUserId = (event) => {
     this.setState({ username: event.target.value });
